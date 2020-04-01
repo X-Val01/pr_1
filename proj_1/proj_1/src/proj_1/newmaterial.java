@@ -33,12 +33,12 @@ public class newmaterial {
 	public void shapka() throws IOException  {
 		
 		
-		shapka[0] = "№   ";	
-		shapka[1] = "Инв. №   ";	
-		shapka[2] = "Наименование материала   ";	
-		shapka[3] = " Кол-во   ";	
-		shapka[4] = " Цена за ед.   ";	
-		shapka[5] = "Сумма";
+		shapka[0] = "N   ";	
+		shapka[1] = "N company;	
+		shapka[2] = "Name Material   ";	
+		shapka[3] = " Quantity   ";	
+		shapka[4] = " Price.   ";	
+		shapka[5] = "Full Price";
 		this.titlone = "1  " + "   2   " 
 			+ "              3            " + "    4      "
 			+"    5       " + "     6  "; 		
@@ -71,7 +71,7 @@ public class newmaterial {
 		
 		}
 		catch(Exception e) {
-			System.out.println("Какой-то Егор");
+			System.out.println("ГЉГ ГЄГ®Г©-ГІГ® Г…ГЈГ®Г°");
 		}
 		
 	}
@@ -83,16 +83,16 @@ public void newmat() throws Exception {
 	
 	
 	for (  int j = 1 ; j >0; j++) {
-		System.out.println("Добавить новый материал - 1");
-		System.out.println("Выход в главное меню - 2");
-		System.out.println("Просмотреть изменения в таблице - 3");
-		System.out.println("Изменить значение - 4");
-		System.out.println("Удалить материал - 5");
+		System.out.println("Add  new material - 1");
+		System.out.println("Back to first menu - 2");
+		System.out.println("Show Table - 3");
+		System.out.println("Change material - 4");
+		System.out.println("Delete Material - 5");
 
 		String str2 = in.nextLine();
 			
 				if(str2.compareTo("1") == 0) {
-				System.out.println("Введите данные");
+				System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ Г¤Г Г­Г­Г»ГҐ");
 				qwerty();
 				continue;
 				
@@ -117,8 +117,7 @@ public void newmat() throws Exception {
 				}
 				
 				else {
-				System.out.println("Вводите пожалуйста пункт "
-						+ "который желаете выполнить");	
+				System.out.println("Write correct data");	
 				newmat();
 				}
 	}
@@ -132,9 +131,9 @@ public void newmat() throws Exception {
 		
 		
 		for (int i = 0; i < 6;i++) {
-			System.out.println("Введите дданые в столбец №-" + (i+1));
-			System.out.println("Если желаете выйти введите - 01  "
-					+ "вернуться на шаг назад введите 02 " );
+			System.out.println("Write data in column" + (i+1));
+			System.out.println("Cancel - 01  "
+					+ "Return on one step back 02 " );
 			String str = in.nextLine();
 			String str1 =str;
 			str1 = str1.toUpperCase();
@@ -178,26 +177,26 @@ public void newmat() throws Exception {
 
 	public void  change() throws Exception {
 		Scanner in = new Scanner(System.in);
-		System.out.println("Хотите  ли вы изменить данные? ДА или НЕТ");
+		System.out.println("Write number material for change");
 		String[] mat = new String[6];
 		
 		String str1 ="4";
-		while (str1.compareTo("НЕТ") != 0 || str1.compareTo("ДА") != 0) {
+		while (str1.compareTo("ГЌГ…Г’") != 0 || str1.compareTo("Г„ГЂ") != 0) {
 			str1 = in.nextLine();
 			str1=str1.toUpperCase();
-			if(str1.compareTo("ДА") == 0) {				
+			if(str1.compareTo("Г„ГЂ") == 0) {				
 				break;
 			}
 			
-			if(str1.compareTo("НЕТ") == 0) {
+			if(str1.compareTo("ГЌГ…Г’") == 0) {
 				materials1_2 obj = new materials1_2();
 				obj.window();
 				break;
 			}
 			
 			else {
-				System.out.println("Введите пожалуйста"
-						+ " ДА или НЕТ");
+				System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ ГЇГ®Г¦Г Г«ГіГ©Г±ГІГ "
+						+ " Г„ГЂ ГЁГ«ГЁ ГЌГ…Г’");
 				continue;  
 			} 
 		}
@@ -205,8 +204,8 @@ public void newmat() throws Exception {
 		BufferedReader reader = new BufferedReader(new FileReader(new File("C:\\Users\\X-Val\\eclipse-workspace"
 				+ "\\Programmsklad\\Sklad\\src\\text.txt")));
 		
-		System.out.print("Введите номер строки  материала,"
-				+ " который желаете изменить");
+		System.out.print("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г®Г¬ГҐГ° Г±ГІГ°Г®ГЄГЁ  Г¬Г ГІГҐГ°ГЁГ Г«Г ,"
+				+ " ГЄГ®ГІГ®Г°Г»Г© Г¦ГҐГ«Г ГҐГІГҐ ГЁГ§Г¬ГҐГ­ГЁГІГј");
 
 		try {
 			
@@ -214,7 +213,7 @@ public void newmat() throws Exception {
 		
 			tabl.clear();
 			
-			while((str=reader.readLine()) != null) {		// запись текста с файла в ArrayList 													//и запись пустых строк в файл(отчистка)
+			while((str=reader.readLine()) != null) {		// Г§Г ГЇГЁГ±Гј ГІГҐГЄГ±ГІГ  Г± ГґГ Г©Г«Г  Гў ArrayList 													//ГЁ Г§Г ГЇГЁГ±Гј ГЇГіГ±ГІГ»Гµ Г±ГІГ°Г®ГЄ Гў ГґГ Г©Г«(Г®ГІГ·ГЁГ±ГІГЄГ )
 				tabl.add(str);
 			}
 			
@@ -235,9 +234,9 @@ public void newmat() throws Exception {
 				String[] mas = new String[6];
 				
 				for (int i=0; i <mas.length;i++) {
-					System.out.println("Введите дданые в столбец №-" + (i+1));
-					System.out.println("Если желаете выйти введите - 01  "
-							+ "вернуться на шаг назад введите 02 " );
+					System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ Г¤Г¤Г Г­Г»ГҐ Гў Г±ГІГ®Г«ГЎГҐГ¶ В№-" + (i+1));
+					System.out.println("Г…Г±Г«ГЁ Г¦ГҐГ«Г ГҐГІГҐ ГўГ»Г©ГІГЁ ГўГўГҐГ¤ГЁГІГҐ - 01  "
+							+ "ГўГҐГ°Г­ГіГІГјГ±Гї Г­Г  ГёГ ГЈ Г­Г Г§Г Г¤ ГўГўГҐГ¤ГЁГІГҐ 02 " );
 					 String strq = in.nextLine();
 					 
 					mas[i] = strq;
@@ -261,7 +260,7 @@ public void newmat() throws Exception {
 						+ "              " + mas[3]  + "     "+ mas[4]           
 								+ "      " + mas[5]);
 				}catch (Exception e) {
-					System.out.println("Введите № цифрами");
+					System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ В№ Г¶ГЁГґГ°Г Г¬ГЁ");
 					change();					
 				}
 			
@@ -275,7 +274,7 @@ public void newmat() throws Exception {
 		} 	catch (Exception e) {
 			}
 
-			try {										// запись новых значений в  файл;
+			try {										// Г§Г ГЇГЁГ±Гј Г­Г®ГўГ»Гµ Г§Г­Г Г·ГҐГ­ГЁГ© Гў  ГґГ Г©Г«;
 				for (int o = 0; o <tabl.size(); o++) {
 					PrintWriter file1 = new PrintWriter(new BufferedWriter(new FileWriter
 							("C:\\Users\\X-Val\\eclipse-workspace\\Programmsklad"
@@ -304,8 +303,8 @@ public void newmat() throws Exception {
 		BufferedReader reader = new BufferedReader(new FileReader(new File("C:\\Users\\X-Val\\eclipse-workspace"
 				+ "\\Programmsklad\\Sklad\\src\\text.txt")));
 		
-		System.out.print("Введите номер строки  материала,"
-				+ " который желаете удалить");
+		System.out.print("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г®Г¬ГҐГ° Г±ГІГ°Г®ГЄГЁ  Г¬Г ГІГҐГ°ГЁГ Г«Г ,"
+				+ " ГЄГ®ГІГ®Г°Г»Г© Г¦ГҐГ«Г ГҐГІГҐ ГіГ¤Г Г«ГЁГІГј");
 
 		try {
 			
@@ -313,7 +312,7 @@ public void newmat() throws Exception {
 		
 			tabl.clear();
 			
-			while((str=reader.readLine()) != null) {		// запись текста с файла в ArrayList 													//и запись пустых строк в файл(отчистка)
+			while((str=reader.readLine()) != null) {		// Г§Г ГЇГЁГ±Гј ГІГҐГЄГ±ГІГ  Г± ГґГ Г©Г«Г  Гў ArrayList 													//ГЁ Г§Г ГЇГЁГ±Гј ГЇГіГ±ГІГ»Гµ Г±ГІГ°Г®ГЄ Гў ГґГ Г©Г«(Г®ГІГ·ГЁГ±ГІГЄГ )
 				tabl.add(str);
 			}
 			
@@ -333,7 +332,7 @@ public void newmat() throws Exception {
 				}
 				tabl.remove(intdelstr);
 				}catch (Exception e) {
-					System.out.println("Введите № цифрами");
+					System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ В№ Г¶ГЁГґГ°Г Г¬ГЁ");
 					deleteone();					
 				}
 			PrintWriter file1 = new PrintWriter(new BufferedWriter(new FileWriter
@@ -345,7 +344,7 @@ public void newmat() throws Exception {
 		} 	catch (Exception e) {
 			}
 
-			try {										// запись новых значений в  файл;
+			try {										// Г§Г ГЇГЁГ±Гј Г­Г®ГўГ»Гµ Г§Г­Г Г·ГҐГ­ГЁГ© Гў  ГґГ Г©Г«;
 				for (int o = 0; o <tabl.size(); o++) {
 					PrintWriter file1 = new PrintWriter(new BufferedWriter(new FileWriter
 							("C:\\Users\\X-Val\\eclipse-workspace\\Programmsklad"
